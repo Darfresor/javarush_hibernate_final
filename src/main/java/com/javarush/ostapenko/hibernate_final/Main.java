@@ -1,11 +1,11 @@
 package com.javarush.ostapenko.hibernate_final;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.javarush.ostapenko.hibernate_final.entity.City;
-import com.javarush.ostapenko.hibernate_final.entity.Country;
-import com.javarush.ostapenko.hibernate_final.entity.CountryLanguage;
-import com.javarush.ostapenko.hibernate_final.repository.CityDAO;
-import com.javarush.ostapenko.hibernate_final.repository.CountryDAO;
+import com.javarush.ostapenko.hibernate_final.domain.entity.City;
+import com.javarush.ostapenko.hibernate_final.domain.entity.Country;
+import com.javarush.ostapenko.hibernate_final.domain.entity.CountryLanguage;
+import com.javarush.ostapenko.hibernate_final.domain.repository.CityDAO;
+import com.javarush.ostapenko.hibernate_final.domain.repository.CountryDAO;
 import io.lettuce.core.RedisClient;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;

@@ -1,4 +1,4 @@
-package com.javarush.ostapenko.hibernate_final.entity;
+package com.javarush.ostapenko.hibernate_final.domain.entity;
 
 import jakarta.persistence.*;
 import org.hibernate.annotations.JdbcTypeCode;

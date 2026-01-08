@@ -1,6 +1,6 @@
-package com.javarush.ostapenko.hibernate_final.repository;
+package com.javarush.ostapenko.hibernate_final.domain.repository;
 
-import com.javarush.ostapenko.hibernate_final.entity.City;
+import com.javarush.ostapenko.hibernate_final.domain.entity.City;
 import org.hibernate.SessionFactory;
 import org.hibernate.query.Query;
 

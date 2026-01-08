@@ -1,4 +1,4 @@
-package com.javarush.ostapenko.hibernate_final.entity;
+package com.javarush.ostapenko.hibernate_final.domain.entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
@@ -7,9 +7,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
-import org.hibernate.annotations.JdbcType;
 import org.hibernate.annotations.JdbcTypeCode;
-import org.hibernate.type.descriptor.jdbc.TinyIntJdbcType;
 
 import java.math.BigDecimal;
 import java.sql.Types;
