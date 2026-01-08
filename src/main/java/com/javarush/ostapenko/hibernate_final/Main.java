@@ -72,6 +72,7 @@ public class Main {
         try (Session session = main.sessionFactory.getCurrentSession()) {
             List<City> allCities = new ArrayList<>();
             session.beginTransaction();
+            List<Country> countries = main.countryDAO.getAll();
 
             int totalCount = main.cityDAO.getTotalCount();
             int step = 500;
