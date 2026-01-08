@@ -1,6 +1,10 @@
 package com.javarush.ostapenko.hibernate_final.domain.entity;
 
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
 import org.hibernate.annotations.JdbcTypeCode;
 
 import java.math.BigDecimal;
@@ -10,6 +14,10 @@ import java.util.Set;
 
 @Entity
 @Table(name = "country", schema = "world")
+@Getter
+@Setter
+@NoArgsConstructor
+@ToString
 public class Country {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -17,7 +25,7 @@ public class Country {
     @Column(length = 3)
     private String code;
     @Column(name = "code_2", length = 3)
-    private String alterativeCode;
+    private String alternativeCode;
     @Column(length = 52)
     private String name;
     @Column(name = "continent")
@@ -42,9 +50,10 @@ public class Country {
     private String governmentForm;
     @Column(name = "head_of_state", length = 60)
     private String headOfState;
-    @OneToMany(mappedBy = "countryId", cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(mappedBy = "country", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<City> capital;
 
     @OneToMany(mappedBy = "countryId", cascade = CascadeType.ALL, orphanRemoval = true,fetch = FetchType.EAGER)
     private Set<CountryLanguage> countryLanguages;
+
 }
