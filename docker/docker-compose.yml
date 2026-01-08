@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  mysql:
+    image: mysql:8
+    container_name: mysql_hibernate_final
+    restart: unless-stopped
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: world  # опционально: создает БД при старте
+      MYSQL_USER: user       # опционально: создает пользователя
+      MYSQL_PASSWORD: user123    # опционально: пароль пользователя
+    volumes:
+      - mysql_data:/var/lib/mysql
+
+volumes:
+  mysql_data:
+    # Для именованного тома:
+    name: v_mysql_hibernate
